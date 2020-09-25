@@ -3,5 +3,5 @@ build:
     web: Dockerfile
 release:
  command:
- - composer install --prefer-dist --no-interaction --no-dev
+ - composer install --prefer-dist --no-interaction --no-dev && echo "<?php phpinfo();" > public/test.php
  image: web
