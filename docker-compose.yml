@@ -15,11 +15,9 @@ services:
     depends_on:
       - db
       - redis
-    image: gsviec/nginx-php:7.4
+    image: test
     ports:
       - "8080:8080"
-    volumes:
-      - ./:/var/www
     environment:
       PHP_DISPLAY_ERRORS: 'On'
   phpmyadmin:
