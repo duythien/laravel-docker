@@ -17,6 +17,7 @@ RUN composer install \
 
 
 FROM gsviec/nginx-php:7.4
+USER root
 RUN apk add gettext libintl && mv /usr/bin/envsubst /usr/local/sbin/envsubst 
 COPY docker/nginx-heroku.conf /etc/nginx/nginx.conf
 COPY ./blog /var/www/
